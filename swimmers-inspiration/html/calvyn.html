@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <!-- Linking external css file -->
+         <link rel="stylesheet" href="../css/athlete-style.css">
+         <!-- chart.js-->
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+        <script src = "../js/data.js"></script>
+
+         
+    </head>
+
+    <body onload = "loadBarGraph(); loadDoughnut(); expandAside();">
+        <nav class = "nav navbar-default bg-dark nav-expand static-top">
+           <a class = "navbar-brand" href = "home.html">Swimmer's Inspiration</a> 
+        </nav>
+
+        <aside id = "athlete-bio">
+            <img class = "rounded-circle dp" src = "../img/calvyn.jpg">
+            <figcaption class = "names">Calvyn Justus</figcaption>
+            <div>
+                <h2 class = "desc-title">Optimal Stroke</h2>
+                <div class = "box">
+                    <p id = "preferred-stroke" class = "desc"></p>
+                </div>
+                <canvas id="myChart" width="20" height="20"></canvas>
+
+            
+                <h2 class = "desc-title">Best Event</h2>
+                <div class = "box">
+                    <p id = "best-event" class = "desc"></p>
+                </div>
+
+                <div class = "box">
+                    <p id = "swimmer-type" class = "desc"></p>
+                </div>
+                <canvas id="myChart2" width="20" height="20"></canvas>
+            </div>
+
+           
+        </aside>
+
+        <section id = "content">           
+            <div id = "times">
+                <h1>Calvyn's Best Times</h1>
+                <table class = "table table-hover" id = "table">
+                    <thead class = "thead-dark">
+                        <tr>
+                            <th scope = "col">Event</th>
+                            <th scope = "col">Course</th>
+                            <th scope = "col">Time</th>
+                            <th scope = "col">Date</th>
+                            <th scope = "col">Meet</th>
+                            <th scope = "col">FINA Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td>50m Freestyle</td>
+                            <td>50m</td>
+                            <td>23.34</td>
+                            <td>15 Jun 2014</td>
+                            <td>Mare Nostrum</td>
+                            <td>719</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Freestyle</td>
+                            <td>25m</td>
+                            <td>22.60</td>
+                            <td>6 Oct 2017</td>
+                            <td>KZN Seagulls Winter Short Course</td>
+                            <td>822</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Freestyle</td>
+                            <td>50m</td>
+                            <td>49.85</td>
+                            <td>12 Jul 2019</td>
+                            <td>CA Los Angeles Invite</td>
+                            <td>833</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>100m Freestyle</td>
+                            <td>25m</td>
+                            <td>48.82</td>
+                            <td>7 Oct 2017</td>
+                            <td>KZN Seagulls Winter Short Course</td>
+                            <td>780</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Freestyle</td>
+                            <td>50m</td>
+                            <td>1:49.56</td>
+                            <td>8 Apr 2014</td>
+                            <td>South African Championships</td>
+                            <td>806</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Freestyle</td>
+                            <td>25m</td>
+                            <td>1:47.33</td>
+                            <td>8 Aug 2014</td>
+                            <td>South African Short Course Championships</td>
+                            <td>806</td>
+                        </tr>
+
+                        <tr>
+                            <td>400m Freestyle</td>
+                            <td>50m</td>
+                            <td>3:54.95</td>
+                            <td>13 Apr 2015</td>
+                            <td>South African Championships</td>
+                            <td>821</td>
+                        </tr>
+
+                        <tr>
+                            <td>400m Freestyle</td>
+                            <td>25m</td>
+                            <td>3:48.73</td>
+                            <td>5 Dec 2014</td>
+                            <td>FINA: 12th World Short Course Championships</td>
+                            <td>799</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Backstroke</td>
+                            <td>25m</td>
+                            <td>26.42</td>
+                            <td>9 Aug 2014</td>
+                            <td>South African Short Course Championships</td>
+                            <td>594</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Backstroke</td>
+                            <td>50m</td>
+                            <td>55.25</td>
+                            <td>5 Apr 2018</td>
+                            <td>XXI Commonwealth Games</td>
+                            <td>826</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Backstroke</td>
+                            <td>25m</td>
+                            <td>53.96</td>
+                            <td>5 Oct 2017</td>
+                            <td>KZN Seagulls Winter Short Course</td>
+                            <td>743</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Medley</td>
+                            <td>50m</td>
+                            <td>2:13.09</td>
+                            <td>27 Aug 2013</td>
+                            <td>South African Short Course Championships</td>
+                            <td>645</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

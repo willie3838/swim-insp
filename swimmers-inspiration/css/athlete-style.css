@@ -1,0 +1,90 @@
+body, html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand{
+    color: white;
+    padding-left: 2%;
+    text-transform: uppercase;
+}
+
+
+
+.desc-title {
+    color:#D8DADE;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-left: 5%;
+    margin-top: 10%;
+    
+}
+.desc{
+    color: white;
+    font-weight: bold;
+    margin: 0;
+
+}
+
+
+#athlete-bio{
+    float: left;
+    height: 100%;
+    width: 30%;
+    background-color:#272728;
+}
+
+
+#content{
+    float:left;
+    width: 69%;
+    height: 100%;
+}
+
+.dp{
+    width: 69%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.names{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-family: sans-serif
+}
+
+h1{
+    margin-left: .5%;
+    margin-top: 2%; 
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+table{
+    margin-left: 0.5%;
+}
+
+canvas{
+    margin-bottom: 5%;
+}
+
+#times{
+    width: 100%;
+}
+
+.box{
+    display: inline-block;
+    margin-left: 5%;
+    padding: 1%;
+    text-align: center;
+    background-color:#3496F9;
+}
+

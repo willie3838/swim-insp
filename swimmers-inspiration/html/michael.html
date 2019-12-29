@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+         <!-- Linking external css file -->
+         <link rel="stylesheet" href="../css/athlete-style.css">
+         <!-- chart.js-->
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+        <script src = "../js/data.js"></script>
+
+         
+    </head>
+
+    <body onload = "loadBarGraph(); loadDoughnut(); expandAside();">
+        <nav class = "nav navbar-default bg-dark nav-expand static-top">
+           <a class = "navbar-brand" href = "home.html">Swimmer's Inspiration</a> 
+        </nav>
+
+        <aside id = "athlete-bio">
+            <img class = "rounded-circle dp" src = "../img/michael.jpg">
+            <figcaption class = "names">Michael Andrew</figcaption>
+            <div>
+                <h2 class = "desc-title">Optimal Stroke</h2>
+                <div class = "box">
+                    <p id = "preferred-stroke" class = "desc"></p>
+                </div>
+                <canvas id="myChart" width="20" height="20"></canvas>
+
+            
+                <h2 class = "desc-title">Best Event</h2>
+                <div class = "box">
+                    <p id = "best-event" class = "desc"></p>
+                </div>
+                <div class = "box">
+                    <p id = "swimmer-type" class = "desc"></p>
+                </div>
+                <canvas id="myChart2" width="20" height="20"></canvas>
+            </div>
+
+        </aside>
+
+        <section id = "content">           
+            <div id = "times">
+                <h1>Michael's Best Times</h1>
+                <table class = "table table-hover" id = "table">
+                    <thead class = "thead-dark">
+                        <tr>
+                            <th scope = "col">Event</th>
+                            <th scope = "col">Course</th>
+                            <th scope = "col">Time</th>
+                            <th scope = "col">Date</th>
+                            <th scope = "col">Meet</th>
+                            <th scope = "col">FINA Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                            <td>50m Freestyle</td>
+                            <td>50m</td>
+                            <td>21.46</td>
+                            <td>12 Aug 2018</td>
+                            <td>13th Pan Pacific Championships</td>
+                            <td>925</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Freestyle</td>
+                            <td>25m</td>
+                            <td>20.94</td>
+                            <td>15 Nov 2018</td>
+                            <td>FINA: World Cup No.7 - 2018 Series</td>
+                            <td>905</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Freestyle</td>
+                            <td>50m</td>
+                            <td>49.87</td>
+                            <td>25 Jul 2018</td>
+                            <td>US National Championships</td>
+                            <td>832</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>100m Freestyle</td>
+                            <td>25m</td>
+                            <td>48.89</td>
+                            <td>26 Aug 2016</td>
+                            <td>FINA: World Cup No 1 - 2016 Series</td>
+                            <td>776</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Freestyle</td>
+                            <td>50m</td>
+                            <td>1:56.71</td>
+                            <td>18 Jan 2014</td>
+                            <td>Grand Prix</td>
+                            <td>667</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Backstroke</td>
+                            <td>50m</td>
+                            <td>24.39</td>
+                            <td>21 Jun 2019</td>
+                            <td>Internazionali d'Italia Trofeo Settcolli</td>
+                            <td>952</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Backstroke</td>
+                            <td>25m</td>
+                            <td>23.11</td>
+                            <td>16 Nov 2018</td>
+                            <td>FINA: World Cup No 7 - 2018 Series</td>
+                            <td>888</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Backstroke</td>
+                            <td>50m</td>
+                            <td>53.40</td>
+                            <td>22 Jun 2019</td>
+                            <td>Internazionali d'Italia Trofeo Settcolli</td>
+                            <td>915</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Backstroke</td>
+                            <td>25m</td>
+                            <td>50.36</td>
+                            <td>6 Oct 2018</td>
+                            <td>FINA: World Cup No 4 - 2018 Series</td>
+                            <td>914</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Backstroke</td>
+                            <td>50m</td>
+                            <td>2:03.69</td>
+                            <td>7 Aug 2014</td>
+                            <td>US Championships</td>
+                            <td>740</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Backstroke</td>
+                            <td>25m</td>
+                            <td>2:00.19</td>
+                            <td>29 Oct 2014</td>
+                            <td>FINA: World Cup No 6 - 2014 Series</td>
+                            <td>678</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Breaststroke</td>
+                            <td>50m</td>
+                            <td>26.84</td>
+                            <td>27 July 2018</td>
+                            <td>US National Championships</td>
+                            <td>903</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Breaststroke</td>
+                            <td>25m</td>
+                            <td>26.09</td>
+                            <td>16 Nov 2019</td>
+                            <td>ISL Series</td>
+                            <td>906</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Breaststroke</td>
+                            <td>50m</td>
+                            <td>59.38</td>
+                            <td>28 July 2018</td>
+                            <td>US National Championships</td>
+                            <td>889</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Breaststroke</td>
+                            <td>25m</td>
+                            <td>57.24</td>
+                            <td>11 Dec 2018</td>
+                            <td>FINA: 14th World Short Course Championships</td>
+                            <td>916</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Breaststroke</td>
+                            <td>50m</td>
+                            <td>2:13.90</td>
+                            <td>11 Aug 2016</td>
+                            <td>US Junior Championships</td>
+                            <td>846</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Butterfly</td>
+                            <td>50m</td>
+                            <td>22.80</td>
+                            <td>22 Jul 2019</td>
+                            <td>FINA: 18th World Championships</td>
+                            <td>931</td>
+                        </tr>
+
+                        <tr>
+                            <td>50m Butterfly</td>
+                            <td>25m</td>
+                            <td>22.32</td>
+                            <td>17 Nov 2018</td>
+                            <td>FINA: World Cup No 7 - 2018 Series</td>
+                            <td>925</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Butterfly</td>
+                            <td>50m</td>
+                            <td>51.53</td>
+                            <td>11 Aug 2018</td>
+                            <td>13th Pan Pacific Championships</td>
+                            <td>903</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Butterfly</td>
+                            <td>25m</td>
+                            <td>50.94</td>
+                            <td>19 Oct 2019</td>
+                            <td>ISL Series</td>
+                            <td>840</td>
+                        </tr>
+
+                        <tr>
+                            <td>200m Butterfly</td>
+                            <td>50m</td>
+                            <td>2:03.54</td>
+                            <td>30 Jul 2014</td>
+                            <td>US Junior Championships</td>
+                            <td>735</td>
+                        </tr>
+
+                        <tr>
+                            <td>100m Medley</td>
+                            <td>25m</td>
+                            <td>51.16</td>
+                            <td>15 Nov 2018</td>
+                            <td>FINA: World Cup No 7 - 2018 Series</td>
+                            <td>948</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
