@@ -22,6 +22,7 @@ body{
 
 #athletes{
     height: 500px;
+    text-align: center;
 }
 
 #title{
@@ -60,10 +61,12 @@ video{
    filter: grayscale(10);
    transition: grayscale color 2s;
    margin-left: 5%;
+  
+
 }
 
 #image-container{
-    margin: 0 auto;
+    display: inline-block;
     height: 100%;
 }
 
