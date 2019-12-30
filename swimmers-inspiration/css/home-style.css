@@ -26,7 +26,8 @@ body{
 
 #title{
     color: white;  
-    padding: 5% 5% 5% 5%;
+    padding: 5% 5% 0% 0%;
+    margin: 0;
     font-size: 2em;
 }
 
@@ -59,6 +60,11 @@ video{
    filter: grayscale(10);
    transition: grayscale color 2s;
    margin-left: 5%;
+}
+
+#image-container{
+    margin: 0 auto;
+    height: 100%;
 }
 
 
