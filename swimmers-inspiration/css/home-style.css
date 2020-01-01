@@ -1,6 +1,14 @@
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+html, body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
 .navbar-brand{
     color: white;
     padding-left: 2%;
@@ -13,7 +21,9 @@ body{
 
 #home{
     height: 600px;
+    width: 100%;
     background-color: black;
+    overflow: hidden;
 }
 
 #athletes-desc{
@@ -22,16 +32,9 @@ body{
 
 #athletes{
     height: 500px;
+    width: 100%;
     text-align: center;
 }
-
-#title{
-    color: white;  
-    padding: 5% 5% 0% 0%;
-    margin: 0;
-    font-size: 2em;
-}
-
 
 .dp{
     height: 200px;
@@ -51,18 +54,34 @@ body{
 
 }
 
-video{
-    height: 400px;
-    width: 100%;
-}
 .wrap{
    float: left;
-   overflow: auto;
+   overflow: hidden;
    filter: grayscale(10);
    transition: grayscale color 2s;
    margin-left: 5%;
-  
+}
 
+.container{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+#title{
+    position: relative;
+    z-index: 100;
+    color: white;  
+    margin: 5% 5% 0% 0%;
+    font-size: 2em;
+}
+
+video{
+    z-index: 0;
+    position: relative;
+    top: -100px;
+    height: 100%;
+    width: 100%;
 }
 
 #image-container{
