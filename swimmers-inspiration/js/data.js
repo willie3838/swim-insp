@@ -147,7 +147,9 @@ function loadBarGraph()
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
+                        suggestedMin: 400,
+                        suggestedMax: 1000,
+                        stepSize: 100
                     }
                 }]
             }
